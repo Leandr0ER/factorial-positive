@@ -1,7 +1,29 @@
-% In this file you should put the actual content of the blueprint.
-% It will be used both by the web and the print version.
-% It should *not* include the \begin{document}
-%
-% If you want to split the blueprint content into several files then
-% the current file can be a simple sequence of \input. Otherwise It
-% can start with a \section or \chapter for instance.
+\section{Factorial}
+
+\begin{definition}
+  \lean{fac}
+  \leanok
+  For any natural number $n$, we define the factorial of $n$, denoted by $n!$,
+  recursively as:
+  \begin{itemize}
+    \item $0! = 1$
+    \item $(n+1)! = (n+1) \cdot n!$
+  \end{itemize}
+\end{definition}
+
+\begin{theorem}
+  \lean{fac_pos}
+  \leanok
+  For every natural number $n$, the factorial of $n$ is strictly positive:
+  \[ n! > 0 \]
+\end{theorem}
+
+\begin{proof}
+  \leanok
+  By induction on $n$.
+  \begin{itemize}
+    \item Base case: $0! = 1 > 0$.
+    \item Inductive step: Assume $n! > 0$. Then $(n+1)! = (n+1) \cdot n!$.
+      Since $n+1 > 0$ and $n! > 0$ (by inductive hypothesis), their product is positive.
+  \end{itemize}
+\end{proof}
