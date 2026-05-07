@@ -28,7 +28,7 @@ github_username: Leandr0ER
 repository: Leandr0ER/factorial-positive
 
 # Build settings
-remote_theme: pages-themes/cayman@0.2.0 
+remote_theme: pages-themes/cayman@v0.2.0 
 plugins:
   - jekyll-remote-theme
   - jekyll-github-metadata
