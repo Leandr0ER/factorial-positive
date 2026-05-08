@@ -16,6 +16,7 @@
 % label a0000000004
 \begin{theorem}[Positivity of Factorials]
   \label{thm:fac_pos}
+  \uses{def:factorial}
   \lean{fac_pos}
   \leanok
   For every natural number $n$, the factorial of $n$ is strictly positive:
@@ -24,7 +25,6 @@
 
 \begin{proof}
   \leanok
-  \uses{fac}
   By induction on $n$.
   \begin{itemize}
     \item Base case: $0! = 1 > 0$.
