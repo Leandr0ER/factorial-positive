@@ -14,12 +14,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      LAKE_NO_RESERVOIR: 1
 
     steps:
       - uses: actions/checkout@v5
       - uses: leanprover/lean-action@v1
-        env:
-          LAKE_NO_RESERVOIR: 1
       - uses: leanprover-community/docgen-action@v1
-        env:
-          LAKE_NO_RESERVOIR: 1
