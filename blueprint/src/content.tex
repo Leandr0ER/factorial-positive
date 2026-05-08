@@ -1,6 +1,8 @@
 \section{Factorial}
 
-\begin{definition}
+% label a0000000003
+\begin{definition}[Factorial]
+  \label{def:factorial}
   \lean{fac}
   \leanok
   For any natural number $n$, we define the factorial of $n$, denoted by $n!$,
@@ -11,7 +13,9 @@
   \end{itemize}
 \end{definition}
 
-\begin{theorem}
+% label a0000000004
+\begin{theorem}[Positivity of Factorials]
+  \label{thm:fac_pos}
   \lean{fac_pos}
   \leanok
   For every natural number $n$, the factorial of $n$ is strictly positive:
@@ -20,6 +24,7 @@
 
 \begin{proof}
   \leanok
+  \uses{fac}
   By induction on $n$.
   \begin{itemize}
     \item Base case: $0! = 1 > 0$.
